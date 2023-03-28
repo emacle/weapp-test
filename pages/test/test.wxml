@@ -1,0 +1,41 @@
+<!--pages/test/test.wxml-->
+<!-- <text>pages/test/test.wxml</text> -->
+<van-button type="default">默认按钮</van-button>
+<van-button type="primary" bindtap="btnTapHandler">主要按钮</van-button>
+<van-button type="info">信息按钮</van-button>
+<van-button type="warning">警告按钮</van-button>
+<van-button type="danger">危险按钮</van-button>
+
+<view>{{info}}</view>
+<image src="{{imgSrc}}" mode="widthFix"></image>
+<button type="primary" bindtap="btnTapHandler" data-info="{{2}}">点击</button>
+<text>{{count}}</text>
+<input value="{{msg}}" bindinput="inputHandler"></input>
+
+<view wx:if ="{{type === 1}}">男</view>
+<view  wx:elif ="{{type === 2}}">女</view>
+<view wx:else>保密</view>
+
+<block wx:if="{{true}}">
+  <view>view1</view>
+  <view>view2</view>
+</block>
+<view hidden="{{!flag}}">hide test</view>
+
+<view wx:for="{{arr1}}" wx:key="index">
+  索引是：{{index}},item项是：{{item}}
+</view>
+<view wx:for="{{arr1}}" wx:for-index="idx" wx:for-item="itemName" wx:key="idx">
+  索引是：{{idx}},item项是：{{itemName}}
+</view>
+<view wx:for="{{userList}}"  wx:key="id">
+  id是：{{item.id}},item项是：{{item.name}}
+</view>
+
+<button type="primary" bindtap="getInfo"> 发起get</button>
+<button type="primary" bindtap="postInfo"> 发起post</button>
+
+<van-grid wx:for="{{colorList}}" wx:key="index">
+  <van-tag size="large" color="rgba({{item}})"> {{item}}
+</van-tag>
+</van-grid>
