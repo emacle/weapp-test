@@ -1,5 +1,11 @@
 <!--index.wxml-->
 <view class="container">
+<view>home home home
+</view>
+<view>{{numA}} + {{numB}} = {{sum}}</view>
+<van-button type='primary' bindtap="btnHandler1" data-step="{{1}}">numA + 1</van-button>
+<van-button type='danger' bindtap="btnHandler2" data-step="{{-1}}">numA - 1</van-button>
+
   <view class="userinfo">
     <block wx:if="{{canIUseOpenData}}">
       <view class="userinfo-avatar" bindtap="bindViewTap">
@@ -20,6 +26,7 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+
   <navigator url="/pages/test/test?name=zs&age=18" open-type="switchTab">to test page</navigator>
   <navigator url="/pages/logs/logs?name=ls&age=30" open-type="navigate">to logs page 非tabbar页面可以传参</navigator>
   <button type="primary" bindtap="gotoTest">编程式跳转tabbar页面</button>

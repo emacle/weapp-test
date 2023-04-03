@@ -1,6 +1,6 @@
 <!--pages/test/test.wxml-->
 <!-- <text>pages/test/test.wxml</text> -->
-<van-button type="default">默认按钮</van-button>
+<view>test page</view>
 <van-button type="primary" bindtap="btnTapHandler">主要按钮</van-button>
 <van-button type="info">信息按钮</van-button>
 <van-button type="warning">警告按钮</van-button>

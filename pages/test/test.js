@@ -52,7 +52,7 @@ Page({
     // })    
   async getInfo(e){
     const { data : res } = await wx.p.request({
-      url:"https://www.escook.cn/api/get1",
+      url:"https://www.escook.cn/api/get",
       method: "GET",
       data:{ name:"zs", age: 20}
     }).catch((e)=>{
